@@ -1,0 +1,17 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    background-color:red;
+    
+}
+nav>ul{
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+nav>ul>li{
+    padding: 20px;
+    gap: 20px;
+}

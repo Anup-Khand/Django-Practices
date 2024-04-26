@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block link %} <link rel="stylesheet" href="{% static 'css/khand.css' %}"> {% endblock link %}
+    {% block link1 %}{% endblock link1 %}
+    <title>{% block title %} {% endblock title %}</title> 
+</head>
+<body>
+    
+<!-- 
+    <p>My name is {{name}}</p>
+    <img src="{% static 'image/joker.jpg' %}" alt=""> -->
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="{% url 'about us' %}">About us</a></li>
+            <li><a href="{% url 'new' %}">New</a></li>
+            <li><a href="{% url 'form' %}">form</a></li>
+        </ul>
+    </nav>
+{% block content%} {% endblock content %}
+
+</body>
+</html>

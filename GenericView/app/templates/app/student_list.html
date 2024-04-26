@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Data</h1>
+    {% if student_list %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+        </tr>
+        {% for s in student_list %}
+        <tr>
+            <td>{{s.name}}</td>
+            <td>{{s.address}}</td>
+            <td>{{s.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h2>No data</h2>
+    {% endif %}
+</body>
+
+</html>

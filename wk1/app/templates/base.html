@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block link %} <link rel="stylesheet" href=""> {% endblock link %}
+    {% block link1 %} {% endblock link1 %}
+    <title>{% block title %} {% endblock title %}</title>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'Register' %}">Register</a></li>
+            <li><a href="{% url 'Login' %}">Login</a></li>
+        </ul>
+    </nav>
+
+{% block content %}
+
+{% endblock content %}
+</body>
+</html>
